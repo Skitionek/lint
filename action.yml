@@ -88,6 +88,7 @@ runs:
     - name: Run MegaLinter
       id: ml_run
       uses: ./.github/actions/_megalinter
+      continue-on-error: true
       env:
         VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' }}
         GITHUB_TOKEN: ${{ inputs.github-token != '' && inputs.github-token || github.token }}
@@ -156,4 +157,11 @@ runs:
       run: |
         echo "A PR with formatting fixes has been created. Please merge it before proceeding."
         echo "PR: ${{ steps.cpr.outputs.pull-request-url }}"
+        exit 1
+
+    - name: Fail if MegaLinter failed
+      if: always() && steps.ml_run.outcome == 'failure'
+      shell: bash
+      run: |
+        echo "MegaLinter failed."
         exit 1
