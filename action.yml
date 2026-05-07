@@ -163,5 +163,5 @@ runs:
       if: always() && steps.ml_run.outcome == 'failure'
       shell: bash
       run: |
-        echo "MegaLinter failed."
+        echo "MegaLinter found linting issues. Review the MegaLinter output above for details."
         exit 1
