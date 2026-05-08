@@ -9,18 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Spelling linters (`SPELL_CSPELL`, `SPELL_MISSPELL`, `SPELL_PROSELINT`, `SPELL_VALE`) now raise warnings instead of errors via `.mega-linter.yml` ([#PR])
-- Bump MegaLinter from `v8` to `v9.4.0` in `lint.yml` ([#PR])
-- `lint.yml` MegaLinter now auto-selects the appropriate flavor (python, javascript, java, go, ruby, php, rust, dotnet, terraform, swift, or `all`) based on changed file extensions; mixed-language PRs fall back to `all` ([#PR])
-- `copilot-auto-fix.yml` now runs GitHub Copilot CLI directly on the runner to fix failing tests and opens a fix PR, instead of posting a `@copilot` comment
+- Demoted spelling lint findings to warnings by making spell linters non-blocking in MegaLinter config. ([#1](https://github.com/Skitionek/lint/pull/1))
 
-### Fixed
-
-- Pin all third-party GitHub Actions to full commit SHAs for supply-chain security
-- Correct dead link in CHANGELOG.md
-
-### Added
-
-- Initial repository template with GitHub Copilot automation integration
-
-[Unreleased]: https://github.com/Skitionek/template
+[Unreleased]: https://github.com/Skitionek/lint
