@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Fixed
+### Changed
 
-- Demoted spelling lint findings to warnings by making spell linters non-blocking in MegaLinter config. ([#1])
+- Demoted spelling lint findings to warnings by making spell linters non-blocking in MegaLinter config. ([#1](https://github.com/Skitionek/lint/pull/1))
 
 [Unreleased]: https://github.com/Skitionek/lint
