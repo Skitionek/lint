@@ -3,7 +3,9 @@
 
 # Spelling linters report warnings instead of blocking the build
 DISABLE_ERRORS_LINTERS:
+  - SPELL_CODESPELL
   - SPELL_CSPELL
+  - SPELL_LYCHEE
   - SPELL_MISSPELL
   - SPELL_PROSELINT
   - SPELL_VALE
