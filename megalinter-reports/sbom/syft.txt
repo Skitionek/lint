@@ -1,0 +1,13 @@
+[0000] ERROR failed to fetch latest version: Get "https://toolbox-data.anchore.io/syft/releases/latest/VERSION": dial tcp: lookup toolbox-data.anchore.io on 168.63.129.16:53: server misbehaving
+[0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+NAME                               VERSION                                   TYPE                            
+./                                 UNKNOWN                                   github-action                   
+actions/checkout                   v6                                        github-action  (+2 duplicates)  
+actions/github-script              v9                                        github-action  (+1 duplicate)   
+actions/setup-node                 v6                                        github-action                   
+dependabot/fetch-metadata          v3.1.0                                    github-action                   
+github/codeql-action/analyze       HIDDEN_BY_MEGALINTER github-action                   
+github/codeql-action/init          HIDDEN_BY_MEGALINTER github-action                   
+github/codeql-action/upload-sarif  HIDDEN_BY_MEGALINTER github-action                   
+hmarr/auto-approve-action          HIDDEN_BY_MEGALINTER github-action                   
+peter-evans/create-pull-request    v8.1.1                                    github-action
