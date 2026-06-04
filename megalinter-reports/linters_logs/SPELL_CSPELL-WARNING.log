@@ -1,0 +1,50 @@
+Results of cspell linter (version 10.0.0)
+See documentation on https://megalinter.io/9.5.0/descriptors/spell_cspell/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /tmp/lint
+Linter raw log:
+.github/CODEOWNERS:1:5       - Unknown word (skitionek)  -- * @skitionek
+	 Suggestions: []
+.github/FUNDING.yml:1:9       - Unknown word (Skitionek)  -- github: Skitionek
+	 Suggestions: []
+.github/workflows/megalinter-auto-approve.yml:22:15     - Unknown word (hmarr)      -- uses: hmarr/auto-approve-action
+	 Suggestions: [harar, Harar, haar, hbar, hear]
+.mega-linter.yml:6:11      - Unknown word (CODESPELL)  -- - SPELL_CODESPELL
+	 Suggestions: [CSPELL, CODESPACE, CODESTYLE]
+.mega-linter.yml:13:9      - Unknown word (zizmor)     -- # Allow zizmor to use the workflow
+	 Suggestions: [zimmer, Zimmer, gizmo, izmir, timor]
+.mega-linter.yml:14:8      - Unknown word (ZIZMOR)     -- ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES
+	 Suggestions: [ZIMMER, Zimmer, GIZMO, IZMIR, TIMOR]
+README.md:17:15     - Unknown word (Skitionek)  -- - uses: Skitionek/lint@v1
+	 Suggestions: []
+CSpell: Files checked: 15, Issues found: 7 in 5 files.
+
+
+You can skip this misspellings by defining the following .cspell.json file at the root of your repository
+Of course, please correct real typos before :)
+
+{
+    "version": "0.2",
+    "language": "en",
+    "ignorePaths": [
+        "**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/**",
+        "**/.pnpm-lock.json",
+        ".vscode",
+        "package-lock.json",
+        "megalinter-reports"
+    ],
+    "words": [
+        "CODESPELL",
+        "Skitionek",
+        "ZIZMOR",
+        "hmarr",
+        "skitionek",
+        "zizmor"
+    ]
+}
+
+
+You can also copy-paste megalinter-reports/.cspell.json at the root of your repository
