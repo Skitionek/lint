@@ -9,3 +9,11 @@ DISABLE_ERRORS_LINTERS:
   - SPELL_MISSPELL
   - SPELL_PROSELINT
   - SPELL_VALE
+
+# Allow zizmor to use the workflow token for GitHub API-backed audits
+ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
+  - GITHUB_TOKEN
+
+# This repository does not contain package manifests for osv-scanner
+DISABLE_LINTERS:
+  - REPOSITORY_OSV_SCANNER
