@@ -9,6 +9,7 @@ DISABLE_ERRORS_LINTERS:
   - SPELL_MISSPELL
   - SPELL_PROSELINT
   - SPELL_VALE
+  - ACTION_ZIZMOR
 
 # Allow zizmor to use the workflow token for GitHub API-backed audits
 ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
