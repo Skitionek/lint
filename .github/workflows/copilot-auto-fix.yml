@@ -90,11 +90,14 @@ jobs:
       - name: Post fix-PR link as comment on original PR
         if: steps.cpr.outputs.pull-request-url != '' && inputs.pr-number != ''
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        env:
+          FIX_PR_URL: ${{ steps.cpr.outputs.pull-request-url }}
+          PR_NUMBER: ${{ inputs.pr-number }}
         with:
           script: |
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: Number('${{ inputs.pr-number }}'),
-              body: `🤖 Copilot has automatically generated a fix for the failing tests.\n\nFix PR: ${{ steps.cpr.outputs.pull-request-url }}`
+              issue_number: Number(process.env.PR_NUMBER),
+              body: `🤖 Copilot has automatically generated a fix for the failing tests.\n\nFix PR: ${process.env.FIX_PR_URL}`
             });
