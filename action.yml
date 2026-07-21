@@ -34,7 +34,7 @@ runs:
   using: composite
   steps:
     - name: Checkout repository
-      uses: actions/checkout@v7
+      uses: actions/checkout@v7.0.1
       with:
         token: ${{ inputs.github-token != '' && inputs.github-token || github.token }}
         fetch-depth: 0
