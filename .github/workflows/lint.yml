@@ -22,18 +22,13 @@ jobs:
       security-events: write # needed to upload SARIF
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-
-      - name: Run lint action from this repository
-        uses: ./
+      - name: Run unified lint action
+        uses: Skitionek/lint@44cdaca8cb2c10077e34583e91f1f574369b0f32
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pat: ${{ secrets.PAT }}
 
-      # ── Upload SARIF for PR annotations ───────────────────────────────────
+      # ── Upload SARIF for PR annotations ────────────────────────────────────────
       - name: Upload SARIF report
         if: >
           (github.event_name == 'pull_request' || github.event_name == 'push') &&
