@@ -53,7 +53,7 @@ runs:
         LANGS=()
         if [[ -n "$CHANGED" ]]; then
           grep -qiE '\.(py|ipynb|pyx|pyi)$'                  <<< "$CHANGED" && LANGS+=(python)
-          grep -qiE '\.(js|ts|jsx|tsx|mjs|cjs|vue|svelte)$' <<< "$CHANGED" && LANGS+=(javascript)
+          grep -qiE '\.(js|ts|jsx|tsx|mjs|cjs|vue|svelte|json)$' <<< "$CHANGED" && LANGS+=(javascript)
           grep -qiE '\.java$'                               <<< "$CHANGED" && LANGS+=(java)
           grep -qiE '\.go$'                                 <<< "$CHANGED" && LANGS+=(go)
           grep -qiE '\.rb$'                                 <<< "$CHANGED" && LANGS+=(ruby)
